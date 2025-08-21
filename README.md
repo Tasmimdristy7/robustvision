@@ -112,7 +112,7 @@ results = testbench.run_tests(
 testbench.generate_report(results, output_dir="./results")
 ```
 
-## 📈 Understanding Your Results
+##  Results
 
 RobustVision provides detailed visualizations and metrics to help you interpret your model's performance:
 
@@ -124,22 +124,22 @@ The overall risk score (0-1) is calculated as a weighted combination:
 
 ### **Key Visualizations Explained**
 
-**🎯 Confusion Matrix**: Shows where your model makes mistakes - ideal models have strong diagonal patterns.
+* Confusion Matrix**: Shows where your model makes mistakes - ideal models have strong diagonal patterns.
 
-**📊 Per-Class Accuracy**: Identifies classes your model struggles with, helping prioritize training data improvements.
+*Per-Class Accuracy**: Identifies classes your model struggles with, helping prioritize training data improvements.
 
-**📈 Calibration Curve**: Measures if your model's confidence matches its accuracy - well-calibrated models follow the diagonal.
+*Calibration Curve**: Measures if your model's confidence matches its accuracy - well-calibrated models follow the diagonal.
 
-**🛡️ Corruption Accuracy**: Tests real-world robustness against common image distortions.
+*Corruption Accuracy**: Tests real-world robustness against common image distortions.
 
-**⚔️ Attack Success Rates**: Shows vulnerability to adversarial attacks - lower is better.
+ *Attack Success Rates**: Shows vulnerability to adversarial attacks - lower is better.
 
-**🔒 Membership Inference ROC**: Measures privacy risk - AUC closer to 0.5 indicates better privacy protection.
+Membership Inference ROC**: Measures privacy risk - AUC closer to 0.5 indicates better privacy protection.
 
 ### **Interpreting Risk Levels**
-- 🟢 **Low Risk** (0.0-0.3): Model performs well across all dimensions
-- ⚠️ **Medium Risk** (0.3-0.7): Some areas need improvement
-- 🔴 **High Risk** (0.7-1.0): Significant vulnerabilities detected
+ **Low Risk** (0.0-0.3): Model performs well across all dimensions
+**Medium Risk** (0.3-0.7): Some areas need improvement
+**High Risk** (0.7-1.0): Significant vulnerabilities detected
 
 ## Project Structure
 
