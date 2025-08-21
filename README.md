@@ -46,7 +46,7 @@ RobustVision generates comprehensive visualizations to help you understand your 
 ![Attack Success Rates](./simple_example_results/plots/attack_success_rates.png)
 *Adversarial attack success rates for FGSM, PGD, and CW attacks*
 
-### 🔒 Security Evaluation
+###  Security Evaluation
 ![Membership Inference ROC](./simple_example_results/plots/membership_inference_roc.png)
 *ROC curve for membership inference attack detection*
 
@@ -54,12 +54,12 @@ RobustVision generates comprehensive visualizations to help you understand your 
 
 | Metric | Value | Risk Level |
 |--------|-------|------------|
-| **Overall Risk Score** | 0.720 | ⚠️ Medium |
-| **Baseline Accuracy** | 8.0% | 🔴 High |
-| **Corruption Accuracy** | 8.0% | 🔴 High |
-| **Attack Success Rate** | 95.3% | 🔴 High |
-| **Membership Inference AUC** | 50.0% | 🟢 Low |
-| **Expected Calibration Error** | 0.037 | 🟢 Low |
+| **Overall Risk Score** | 0.720 |  Medium |
+| **Baseline Accuracy** | 8.0% |  High |
+| **Corruption Accuracy** | 8.0% |  High |
+| **Attack Success Rate** | 95.3% |  High |
+| **Membership Inference AUC** | 50.0% |  Low |
+| **Expected Calibration Error** | 0.037 |  Low |
 
 *Results from testing a simple untrained model - trained models typically show much better performance*
 
