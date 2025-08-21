@@ -1,0 +1,45 @@
+# RobustVision Default Configuration
+
+tests:
+  correctness:
+    enabled: true
+    metrics: ["accuracy", "ece", "confusion_matrix"]
+    batch_size: 32
+  
+  robustness:
+    enabled: true
+    corruptions:
+      - "gaussian_noise"
+      - "motion_blur"
+      - "brightness"
+      - "contrast"
+      - "fog"
+      - "snow"
+    attacks:
+      - "fgsm"
+      - "pgd"
+      - "cw"
+    attack_params:
+      fgsm:
+        epsilon: 0.3
+      pgd:
+        epsilon: 0.3
+        alpha: 0.01
+        steps: 40
+      cw:
+        c: 1.0
+        steps: 1000
+  
+  security:
+    enabled: true
+    membership_inference: true
+    data_poisoning: true
+    adversarial_vulnerability: true
+
+reporting:
+  format: ["html", "markdown"]
+  include_plots: true
+  risk_score_weights:
+    correctness: 0.3
+    robustness: 0.4
+    security: 0.3 

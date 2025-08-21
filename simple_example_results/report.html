@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobustVision Test Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .risk-score {
+            font-size: 2em;
+            font-weight: bold;
+            color: orange;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .metric {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            min-width: 150px;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .plot {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .plot img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>RobustVision Test Report</h1>
+            <p class="timestamp">Generated on 2025-08-22 02:06:57</p>
+            <div class="risk-score">Overall Risk Score: 0.693</div>
+        </div>
+        
+        <div class="section">
+            <h2>Model Information</h2>
+            <div class="metric">
+                <div>Model Name</div>
+                <div class="metric-value">SimpleModel</div>
+            </div>
+            <div class="metric">
+                <div>Parameters</div>
+                <div class="metric-value">2,442</div>
+            </div>
+            <div class="metric">
+                <div>Device</div>
+                <div class="metric-value">cpu</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Dataset Information</h2>
+            <div class="metric">
+                <div>Dataset</div>
+                <div class="metric-value">TensorDataset</div>
+            </div>
+            <div class="metric">
+                <div>Samples</div>
+                <div class="metric-value">100</div>
+            </div>
+            <div class="metric">
+                <div>Classes</div>
+                <div class="metric-value">Unknown</div>
+            </div>
+        </div>
+        
+        
+        <div class="section">
+            <h2>Correctness Tests</h2>
+            <div class="metric">
+                <div>Accuracy</div>
+                <div class="metric-value">0.110</div>
+            </div>
+            <div class="metric">
+                <div>ECE</div>
+                <div class="metric-value">0.020</div>
+            </div>
+        </div>
+            
+        <div class="section">
+            <h2>Robustness Tests</h2>
+            <div class="metric">
+                <div>Corruption Accuracy</div>
+                <div class="metric-value">0.112</div>
+            </div>
+            <div class="metric">
+                <div>Attack Success Rate</div>
+                <div class="metric-value">0.890</div>
+            </div>
+        </div>
+            
+        <div class="section">
+            <h2>Security Tests</h2>
+            <div class="metric">
+                <div>Membership Inference AUC</div>
+                <div class="metric-value">0.500</div>
+            </div>
+            <div class="metric">
+                <div>Adversarial Vulnerability</div>
+                <div class="metric-value">0.990</div>
+            </div>
+        </div>
+            
+        
+        
+        <div class="section">
+            <h2>Visualizations</h2>
+        
+            <div class="plot">
+                <h3>Confusion Matrix</h3>
+                <img src="plots/confusion_matrix.png" alt="confusion_matrix.png">
+            </div>
+            
+            <div class="plot">
+                <h3>Calibration Curve</h3>
+                <img src="plots/calibration_curve.png" alt="calibration_curve.png">
+            </div>
+            
+            <div class="plot">
+                <h3>Corruption Accuracy</h3>
+                <img src="plots/corruption_accuracy.png" alt="corruption_accuracy.png">
+            </div>
+            
+            <div class="plot">
+                <h3>Attack Success Rates</h3>
+                <img src="plots/attack_success_rates.png" alt="attack_success_rates.png">
+            </div>
+            
+            <div class="plot">
+                <h3>Risk Score Breakdown</h3>
+                <img src="plots/risk_score_breakdown.png" alt="risk_score_breakdown.png">
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
+        
